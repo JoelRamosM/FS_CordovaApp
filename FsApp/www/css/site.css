@@ -1,0 +1,10 @@
+.container-form{
+    display: none;
+}
+
+.container-form .selecionado{
+    display: block;
+}
+.filtroData{
+    display: none;
+}

@@ -1,46 +1,92 @@
-<!DOCTYPE html>
-<!--
-    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
-
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
+<!DOCTYPE HTML>
 <html>
     <head>
-        <meta charset="utf-8" />
+        <title>Fortes Ponto</title>
+        <meta charset="utf-8"/>
         <meta name="format-detection" content="telephone=no" />
         <meta name="msapplication-tap-highlight" content="no" />
-        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>Hello World</title>
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width,                         height=device-height, target-densitydpi=device-dpi" />
+        
+        <link rel="stylesheet" type="text/css" href="css/site.css" />
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.custom.structure.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.custom.theme.min.css" />
+                        
     </head>
+
     <body>
-        <div class="app">
-            <h1>PhoneGap</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
+        <nav class="navbar navbar-inverse" role="navigation">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand menu" data-toggle="collapse" data-target=".navbar-ex1-collapse" href="#">Menu</a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                <a class="navbar-brand batidasHoje" data-toggle="collapse" data-target=".navbar-ex1-collapse" href="#">
+                <span class="glyphicon glyphicon-time"></span>
+                Batidas de Hoje
+                </a>  
+                <a class="navbar-brand doDia" data-toggle="collapse" data-target=".navbar-ex1-collapse" href="#">
+                <span class="glyphicon glyphicon-calendar"></span>
+                Batidas do Dia
+                </a>  
+                <a class="navbar-brand justificativa" data-toggle="collapse" data-target=".navbar-ex1-collapse" href="#">
+                <span class="glyphicon glyphicon-asterisk"></span>
+                Enviar Esquecimento de Batida
+                </a><a class="navbar-brand homeBtn" data-toggle="collapse" data-target=".navbar-ex1-collapse" href="#">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                Home
+                </a>      
+            </ul>    
+          </div><!-- /.navbar-collapse -->
+        </nav>
+        <div class="container-fluid home">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="jumbotron">
+                        <h1>Bem vindo ao Fortes Ponto!</h1>
+                        <h3>Verifique suas batidas de hoje.<span class="label label-success">Novo</span></h3>
+                        <h3>Verifique suas batidas de outros dias.<span class="label label-success">Novo</span></h3>
+                        <h3>Jusitifique esquecimentos.<span class="label label-success">Novo</span></h3>
+                    </div>
+                </div>
             </div>
         </div>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript">
-            app.initialize();
-        </script>
+        <div class = "container-fluid container-form">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Dados</h3>
+              </div>
+              <div class="panel-body">
+                    <form role="form">
+                      <div class="form-group pis">
+                        <label for="PIS">PIS:</label>
+                        <input type="text" class="form-control" id="PIS" placeholder="Informe Seu PIS">
+                      </div>
+                      <div class="form-group filtroData">
+                        <label for="start">Dia:</label>
+                        <input type="date" class="form-control" id="Data" placeholder="Inicio do perido.">                    
+                      </div>
+                      <div style="float:right;">
+                        <button type="button" class="btn btn-default pesquisar">Enviar</button>
+                      </div>    
+                    </form> 
+              </div>
+            </div>
+        </div>
+        
+
+        <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+        <script type="text/javascript" src="js/site.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile.custom.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
     </body>
 </html>
